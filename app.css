@@ -1,0 +1,155 @@
+@import url(https://fonts.googleapis.com/css?family=Pacifico:regular);
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+		Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-family: 'Pacifico';
+}
+
+html,body {
+	height: 100%;
+	width: 100%;
+	background-color: #212121;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.container {
+	height: 100%;
+	width: 100%;
+	padding: 20px 0;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 2fr auto;
+	grid-row-gap: 20px;
+	justify-items: center;
+	align-items: center;
+}
+
+h1 {
+	align-self: flex-start;
+	text-align: center;
+	font-family: 'Pacifico';
+	font-size: 6rem;
+	line-height: 7rem;
+	color: rgba(209,14,134,1);
+	text-shadow: -1px -1px 0 #ffffffaa, 1px 1px 0 #ffffffaa, -1px 0px 0 #ffffffaa, 0px -1px 1px #ffffffaa;
+	
+
+}
+
+form {
+	width: 100%;
+	display: grid;
+	justify-items: center;
+	align-content: space-between;
+	grid-row-gap: 30px;
+	/* background-color: grey; */
+}
+
+.result-box {
+	padding: 20px;
+	height: fit-content;
+	width: 100%;
+	min-width: 300px;
+	max-width: 690px;
+	display: grid;
+	justify-items: center;
+	align-items: center;
+	background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(209,14,134,1) 0%, rgba(234,55,59,0.76) 90.8% );
+	color: #ffffffaa;
+	border-radius: 89% 11% 81% 19%;
+	overflow: hidden;
+	opacity: 0;
+	transition: 1s;
+}
+
+input, button {
+	width: 40%;
+	min-width: fit-content;
+	padding: 0 30px;
+	font-size: 2.5rem;
+	border: 2px solid #ffffff40;
+	border-radius: 5% 95% 4% 96% / 79% 23% 77% 21%;	
+	outline: none;
+	text-align: center;
+	transition: 1s;
+}
+
+input {
+	font-family: 'Pacifico';
+	font-weight: normal;
+	color: #fff;
+	background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(209,14,134,1) 0%, rgba(234,55,59,0.76) 90.8% );
+	background-size: 110%;
+	background-position: center;
+}
+
+input::placeholder {
+	color: #ffffffaa;
+}
+
+input:focus {
+	border: 2px solid #ffffffaa;
+	border-radius: 5% 30% 50% 96% / 50% 10% 77% 50%;
+}
+
+button {
+	width: 30%;
+	color: #ffffffaa;
+	background-color: rgba(209,14,134,1);
+	border: 2px solid #ffffff40;
+	border-radius: 91% 9% 88% 12% / 15% 76% 24% 85%;
+}
+button:hover {
+	border-radius: 13% 87% 13% 87% / 71% 22% 78% 29%;
+	border: 2px solid #ffffffaa;
+}
+
+.result-box.active, .result-box.error {
+	border-radius: 89% 11% 81% 19% / 32% 76% 24% 68%;
+	opacity: 1;
+}
+p { 
+	transform: translateX(-300%);
+	font-size: 3rem;
+}
+
+span {
+	font-family: 'Pacifico';
+	transform: translateX(300%);
+	font-size: 4rem;
+}
+
+.result-box.active p {
+	animation: showresult1 1s 0.8s forwards;
+}
+.result-box.active span {
+	animation: showresult2 1s 0.8s forwards;
+}
+.result-box.error span {
+	animation: showresult2 1s 0.5s forwards;
+}
+
+@keyframes showresult1 {
+	50% {
+		transform: translateX(30%);
+	}
+	100% {
+		transform: translateX(0%);
+	}
+}
+@keyframes showresult2 {
+	50% {
+		transform: translateX(-30%);
+	}
+	100% {
+		transform: translateX(0%);
+	}
+}
