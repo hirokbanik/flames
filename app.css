@@ -24,6 +24,7 @@ body {
 	height: 100%;
 	width: 100%;
 	padding: 20px 0;
+	margin: 0 10px;
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: 1fr 2fr auto;
@@ -36,8 +37,8 @@ h1 {
 	align-self: flex-start;
 	text-align: center;
 	font-family: 'Pacifico';
-	font-size: 6rem;
-	line-height: 7rem;
+	font-size: 4.5rem;
+	line-height: 4.5rem;
 	color: rgba(209,14,134,1);
 	text-shadow: -1px -1px 0 #ffffffaa, 1px 1px 0 #ffffffaa, -1px 0px 0 #ffffffaa, 0px -1px 1px #ffffffaa;
 	
@@ -50,7 +51,6 @@ form {
 	justify-items: center;
 	align-content: space-between;
 	grid-row-gap: 30px;
-	/* background-color: grey; */
 }
 
 .result-box {
@@ -116,37 +116,22 @@ button:hover {
 	border-radius: 89% 11% 81% 19% / 32% 76% 24% 68%;
 	opacity: 1;
 }
-p { 
-	transform: translateX(-300%);
-	font-size: 3rem;
-}
 
 span {
 	font-family: 'Pacifico';
 	transform: translateX(300%);
-	font-size: 4rem;
+	font-size: 3rem;
 	text-align-last: center;
 }
 
-.result-box.active p {
-	animation: showresult1 1s 0.8s forwards;
-}
 .result-box.active span {
-	animation: showresult2 1s 0.8s forwards;
+	animation: showresult 1s 0.8s forwards;
 }
 .result-box.error span {
-	animation: showresult2 1s 0.5s forwards;
+	animation: showresult 1s 0.5s forwards;
 }
 
-@keyframes showresult1 {
-	50% {
-		transform: translateX(30%);
-	}
-	100% {
-		transform: translateX(0%);
-	}
-}
-@keyframes showresult2 {
+@keyframes showresult {
 	50% {
 		transform: translateX(-30%);
 	}

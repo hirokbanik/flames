@@ -23,9 +23,9 @@ function flames(e) {
     const name2 = form.name2.value;
     const flames = [
       "Friends",
-      "In Love",
-      "Gonna have an Affair",
-      "Gonna Marry",
+      "Lovers",
+      "Affair",
+      "Marriage",
       "Enemies",
       "Siblings"
     ];
@@ -48,6 +48,6 @@ function flames(e) {
     result.textContent = nLength % fLength === 0 ? "Soul Mates" : flames[l];
   } else {
 	resultbox.classList.add("error");
-	result.textContent = 'Enter both names';
+	result.textContent = 'Name missing';
   }
 }
