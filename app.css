@@ -125,6 +125,7 @@ span {
 	font-family: 'Pacifico';
 	transform: translateX(300%);
 	font-size: 4rem;
+	text-align-last: center;
 }
 
 .result-box.active p {
